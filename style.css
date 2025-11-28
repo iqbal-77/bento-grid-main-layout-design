@@ -1,0 +1,266 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root{
+ --Purple-color1: hsl(254, 88%, 90%);
+ --Purple-color2: hsl(256, 67%, 59%);
+
+ --Yellow100-color: hsl(31, 66%, 93%);
+ --Yellow500-color: hsl(39, 100%, 71%);
+
+ --White-color: hsl(0, 0%, 100%);
+ --Black-color: hsl(0, 0%, 7%);
+}
+
+@font-face {
+  
+  font-family: font1; 
+  font-weight: 400; 
+  src: url(assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf) format('woff2'),
+       url(assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf) format('woff');
+}
+@font-face {
+  
+  font-family: font2; 
+  font-weight: 400; 
+  src: url(assets/fonts/DMSans-VariableFont_opsz,wght.ttf) format('woff2'),
+       url(assets/fonts/DMSans-VariableFont_opsz,wght.ttf) format('woff');
+}
+
+
+
+
+h1{
+    font-family: font1;
+    color:var(--White-color);
+    font-size:2.6rem;
+    white-space: wrap;
+   padding:0em 1em 0.7em 1.5em;
+}
+#span1{color:var( --Yellow500-color)}
+#span2{color:var(--Purple-color2)}
+h2{
+    font-size:2rem
+}
+p{
+    font-size:1.3rem
+}
+#p1{
+    color:var(--Yellow500-color)
+}
+.div6-heading{
+    font-size: 3rem;
+}
+
+body{
+    font-family:font2;
+    background-color:rgba(250, 239, 239, 0.419) ;
+}
+
+.main{
+    display:grid;
+    row-gap:2em;
+    grid-template-columns:1em auto 1em;
+    grid-template-rows:0.3em 20em 13em 16.8em 34em 25em 16.3em 17.3em 28em 1em;
+    grid-template-areas: 
+    ".   .  ."
+    ". div1 ."
+    ". div2 ."
+    ". div3 ."
+    ". div4 ."
+    ". div5 ."
+    ". div6 ."
+    ". div7 ."
+    ". div8 ."
+    ".   .  .";
+}
+.box{
+    border-radius:1em
+}
+.div1{
+    
+    grid-area: div1;
+    background-color: var(--Purple-color2);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.div2{
+    
+    grid-area: div2;
+    background-color: var(--White-color);
+    padding:1em
+    
+}
+.div3{
+   
+    grid-area: div3;
+    background-color: var(--Yellow500-color);
+    padding:1em;
+    
+}
+.div4{
+    
+    grid-area: div4;
+    background-color: var(--Purple-color1);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.div5{
+   
+    grid-area: div5;
+    background-color: var(--Purple-color2);
+    color:var(--White-color);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:2em;
+    text-align: center;
+
+}
+.div6{
+    grid-area: div6;
+    background-color: var(--White-color);
+    padding:1.5em
+}
+.div7{
+    grid-area: div7;
+    background-color: var(--Yellow100-color);
+    padding: 2em;
+}
+.div8{
+    grid-area: div8;
+    background-color: var(--Yellow500-color);
+    padding:2em
+}
+
+
+.img1{
+    width:12em;
+    height:auto;
+}
+.img2{
+    width:22em;
+    height:auto;
+    padding-bottom: 0.5em;
+}
+.img3{
+    width:13em;
+    height:auto;
+    padding-top: 0.9em;
+
+}
+.img4{
+    width:22em;
+    height:auto;
+    padding:1em 0em 1.5em 0em
+}
+.img5{
+    width:16em;
+     height:auto;
+     padding-bottom: 1.5em;
+}
+.img6{
+    width:16em;
+     height:auto;
+     padding-top: 1.5em;
+}
+.img7{
+    width:14em;
+     height:auto;
+     padding-top: 2em;
+}
+.img8{
+    width:17em;
+     height:auto;
+      padding-top: 2em;
+}
+
+@media (min-width:48em){
+  
+    .main{
+        gap:2em;
+        grid-template-columns:0.1em auto auto auto auto 0.1em;
+        grid-template-rows:0.1em auto auto auto auto 0.1em;
+        grid-template-areas:
+        ". . . . . ."
+        ". div7 div1 div1 div4 ."
+        ". div7 div2 div3 div4 ."
+        ". div8 div2   div3 div4 . "
+        ". div8 div6 div5 div5 . "
+        ". . . . . ."        
+    }
+    .div2{
+        overflow: hidden;
+        
+    }
+    .div3{
+        overflow: hidden;
+    }
+    .div4{
+        overflow: hidden;
+    }
+     .div5{
+        display:flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+    .div6{
+        overflow: hidden;
+    }
+    .div7{
+        overflow: hidden;
+    }
+    .div8{
+        overflow: hidden;
+    }
+    .img4{
+        padding-left:7em
+    }
+    .img7{
+        width:10em;
+        padding-right: 2.5em;
+    }
+   
+    h2{
+    font-size:1.5rem
+}
+}
+@media (min-width:68em){
+   
+    .main{
+        gap:2em;
+        grid-template-columns:1em 1fr 1fr 1fr 1fr 1em;
+        grid-template-rows:3em 1fr 7em 7em  1fr 3em;
+        grid-template-areas:
+        ". . . . . ."
+        ". div7 div1 div1 div4 ."
+        ". div7 div2 div3 div4 ."
+        ". div8 div2   div3 div4 . "
+        ". div8 div6 div5 div5 . "
+        ". . . . . ."        
+    }
+    .div3{
+        overflow: hidden;
+    }
+    .div4{
+        overflow: hidden;
+    }
+    .img4{
+        padding-left:3em
+    }
+    .div5{
+        display:flex;
+        flex-direction: row;
+    }
+}
+
