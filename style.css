@@ -35,17 +35,18 @@
 h1{
     font-family: font1;
     color:var(--White-color);
-    font-size:2.6rem;
+    font-size:clamp(2rem ,90% ,2.6rem);
     white-space: wrap;
-   padding:0em 1em 0.7em 1.5em;
+   padding:0em 0em 0.7em 0em;
 }
 #span1{color:var( --Yellow500-color)}
 #span2{color:var(--Purple-color2)}
 h2{
-    font-size:2rem
+    font-size:fit-content;
+    
 }
 p{
-    font-size:1.3rem
+    font-size:clamp(0.9rem, 1.5vw , 1.1rem) ;
 }
 #p1{
     color:var(--Yellow500-color)
@@ -87,6 +88,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     
     
 }
@@ -140,49 +142,54 @@ body{
 .div8{
     grid-area: div8;
     background-color: var(--Yellow500-color);
-    padding:2em
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;;
 }
 
 
 .img1{
-    width:12em;
+    width:min(12em , 70%);
     height:auto;
 }
 .img2{
-    width:22em;
+    width:100%;
     height:auto;
     padding-bottom: 0.5em;
 }
 .img3{
-    width:13em;
+    width:clamp(9.5em, 70% , 16.5em);
     height:auto;
     padding-top: 0.9em;
 
 }
 .img4{
-    width:22em;
+    width:min(22em, 90%);
     height:auto;
     padding:1em 0em 1.5em 0em
 }
 .img5{
-    width:16em;
+     width:min(16em, 80%);
      height:auto;
      padding-bottom: 1.5em;
+
 }
 .img6{
-    width:16em;
+    width:100%;
      height:auto;
      padding-top: 1.5em;
 }
 .img7{
-    width:14em;
+    width:clamp(10em ,70% ,18em);
      height:auto;
      padding-top: 2em;
 }
 .img8{
-    width:17em;
+    width:100%;
      height:auto;
-      padding-top: 2em;
+      padding-top: 2em
+      
 }
 
 @media (min-width:48em){
@@ -224,10 +231,11 @@ body{
         overflow: hidden;
     }
     .img4{
-        padding-left:7em
+        padding-left:0em
     }
+    
     .img7{
-        width:10em;
+        
         padding-right: 2.5em;
     }
    
@@ -256,11 +264,12 @@ body{
         overflow: hidden;
     }
     .img4{
-        padding-left:3em
+        padding-left:0em
     }
     .div5{
         display:flex;
         flex-direction: row;
     }
+   
 }
 
